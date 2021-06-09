@@ -1,4 +1,4 @@
-﻿using Loany.ViewModels;
+﻿//using Loany.ViewModels;
 using Loany.Views;
 using System;
 using System.Collections.Generic;
@@ -11,8 +11,7 @@ namespace Loany
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(ClientListPage), typeof(ClientListPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:MvvmHelpers;assembly=MvvmHelpers"
+             xmlns:model="clr-namespace:Loany.Models"
+             xmlns:viewmodels="clr-namespace:Loany.ViewModels"
+             x:Class="Loany.Views.ClientListPage"
+             
+             x:DataType="viewmodels:ClientListViewModel"
+             Title="Clientes">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ClientListViewModel/>
+    </ContentPage.BindingContext>
+
+   
+        <ListView ItemsSource="{Binding ClientList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <StackLayout>
+                            <Label
+                        TextColor="Black"
+                        Text="{Binding Name}"
+                        FontSize="20"
+                        />
+                            <Label
+                        TextColor="Black"
+                        Text="{Binding Phone}"
+                        FontSize="20"
+                        />
+                        </StackLayout>
+                       
+                    </Grid>
+                </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    
+    
+</ContentPage>

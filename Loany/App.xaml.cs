@@ -1,5 +1,4 @@
-﻿using Loany.Services;
-using Loany.Views;
+﻿using Loany.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +12,7 @@ namespace Loany
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            
             MainPage = new AppShell();
         }
 
