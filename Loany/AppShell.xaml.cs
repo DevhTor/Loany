@@ -12,11 +12,9 @@ namespace Loany
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(ClientListPage), typeof(ClientListPage));
+            Routing.RegisterRoute(nameof(NewClientPage), typeof(NewClientPage));
         }
 
-        private async void OnMenuItemClicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("//LoginPage");
-        }
+        
     }
 }

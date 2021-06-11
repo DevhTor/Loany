@@ -13,10 +13,15 @@
         <viewmodels:ClientListViewModel/>
     </ContentPage.BindingContext>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Nuevo" Command="{Binding AddNewClientCommand}"/>
+    </ContentPage.ToolbarItems>
    
-        <ListView ItemsSource="{Binding ClientList}">
+        <ListView 
+            ItemsSource="{Binding ClientList}" 
+            HasUnevenRows="True">
             <ListView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="model:Client">
                 <ViewCell>
                     <Grid>
                         <StackLayout>
