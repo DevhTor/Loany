@@ -1,4 +1,4 @@
-﻿using Loany.Models;
+﻿﻿using Loany.Models;
 using Loany.Views;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
@@ -15,7 +15,7 @@ namespace Loany.ViewModels
 
         public ObservableRangeCollection<Client> ClientList { get; set; }
 
-
+        
         
         public AsyncCommand AddNewClientCommand { get; }
 
@@ -24,6 +24,7 @@ namespace Loany.ViewModels
 
             ClientList = new ObservableRangeCollection<Client>();
 
+            
             
             AddNewClientCommand = new AsyncCommand(AddNewCliente);
 
